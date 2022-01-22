@@ -6,7 +6,7 @@ import User from '../components/User'
 function Navigation(){
     return(
         <>
-        <h1>router Class</h1>
+        
         <Routes>
             <Route path="/about"   element={<About/>} /> 
             <Route path="/"   element={<Home/>} />

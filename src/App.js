@@ -3,7 +3,7 @@ import Navigation from './config/Navigation'
 function App() {
   return (
     <>
-    <h1>This is Home Page from App.js</h1>
+    <h1>How Routes Works</h1>
    <Navigation/>
     </>
   );
