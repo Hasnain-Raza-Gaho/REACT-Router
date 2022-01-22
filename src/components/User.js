@@ -1,4 +1,6 @@
 import React from 'react';
+import { Link } from "react-router-dom";
+
 
 const User = () => {
 
@@ -25,6 +27,9 @@ let a = [
     return (
         <div>
             <h1>User Data</h1>
+            <Link to="/"> <button >Go To home
+        </button>
+        </Link> 
 
             {
                 a.map((v,i)=>{
