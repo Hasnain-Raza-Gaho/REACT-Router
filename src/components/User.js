@@ -16,24 +16,19 @@ let a = [
 
     return (
         <div>
-            <h1>User Data</h1>
-            <Link to="/"> <button >Go To home
+            <h1>User Account Info</h1>
+            
+            <p><strong>Name: </strong>{loc.state.name}</p>
+            <p><strong>Email: </strong>{loc.state.email}</p>
+            
+            
+            
+            
+            <Link to="/"> <button>SignOut
         </button>
         </Link> 
 
-            {
-                a.map((v,i)=>{
-                    return(
-                        <div key={i}>
-                            <hr />
-
-                        <p>Name: {v.name}</p>
-                        <p>Email: {v.Course}</p>
-                        <hr />
-                        </div>
-                        )
-                })
-            }
+            
         </div>
     );
 }

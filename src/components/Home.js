@@ -10,7 +10,7 @@ function Home() {
 console.log(name)
   return (
     <>
-      <p>Put your Data to Sign In</p>
+    <h2>Sign Into Your Account</h2>
       <label htmlFor="name">Name:
       <input type="text" onChange={(n)=>setName(n.target.value)} />
       </label>
@@ -26,7 +26,7 @@ console.log(name)
                email : email
            }
         }
-        )}>onClick</button>
+        )}>SignIn</button>
     </>
 
   )
