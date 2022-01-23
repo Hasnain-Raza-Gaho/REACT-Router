@@ -1,26 +1,16 @@
 import React from 'react';
-import { Link } from "react-router-dom";
+import { useLocation,Link } from "react-router-dom";
 
 
 const User = () => {
-
+    let loc = useLocation()
+    console.log(loc)
 let a = [
     {
-        name : "Asad",
-        Course : 'Ai'
-    },
-    {
-        name : "Ali",
-        Course : 'Flutter'
-    },
-    {
-        name : "Amir",
-        Course : 'Web App'
-    },
-    {
-        name : "Salu",
-        Course : 'Graphic'
-    },
+        name : loc.state.name,
+        Course : loc.state.email
+    }
+    
 ]
 
 
@@ -38,7 +28,7 @@ let a = [
                             <hr />
 
                         <p>Name: {v.name}</p>
-                        <p>Course: {v.Course}</p>
+                        <p>Email: {v.Course}</p>
                         <hr />
                         </div>
                         )
