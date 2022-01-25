@@ -1,19 +1,21 @@
-import { Link } from "react-router-dom";
-import { useLocation } from 'react-router-dom';
+import { useLocation ,Link} from "react-router-dom";
 
 function About() {
 
+    let loc = useLocation()
+    console.log(loc)
+
+    return (
+        <>
+
+        <h1>About {loc.state.name}</h1>
+        <Link to={"/User"}>
+            Go To uSER
+        </Link>
+        </>
 
 
-  return (
-<>
-      <h1>About Page</h1>
-      <Link to="/"> <button >Go To Home Page Back
-        </button>
-        </Link> 
-</>
-    
-  )
+    )
 }
 
 export default About;

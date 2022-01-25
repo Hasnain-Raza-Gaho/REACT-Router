@@ -1,51 +1,47 @@
-import React from 'react';
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"
 
+function User(){
 
-const User = () => {
+    let a = [
+        {
+            name : "asad",
+            course : "Ai"
+        },
+        {
+            name : "omer",
+            course : "Flutter"
+        },
+        {
+            name : "Ali",
+            course : "Mern"
+        },
+        {
+            name : "Zohaib",
+            course : "Jam Stack"
+        }
+    ]
 
-let a = [
-    {
-        name : "Asad",
-        Course : 'Ai'
-    },
-    {
-        name : "Ali",
-        Course : 'Flutter'
-    },
-    {
-        name : "Amir",
-        Course : 'Web App'
-    },
-    {
-        name : "Salu",
-        Course : 'Graphic'
-    },
-]
-
-
-    return (
-        <div>
-            <h1>User Data</h1>
-            <Link to="/"> <button >Go To home
-        </button>
-        </Link> 
-
-            {
-                a.map((v,i)=>{
-                    return(
-                        <div key={i}>
-                            <hr />
-
-                        <p>Name: {v.name}</p>
-                        <p>Course: {v.Course}</p>
-                        <hr />
-                        </div>
-                        )
-                })
-            }
-        </div>
-    );
+    return(
+        <>
+        <h1>User Data</h1>
+        {
+            a.map((v,i)=>{
+                return(
+                    <div style={{border:"2px solid red"}} key={i}>
+                       <Link  to={
+                           {pathname : `/User/${v.name}/${i}`
+                           }
+                           }
+                           >
+                        <h1>{v.name}</h1>
+                        <b>{v.course}</b>
+                        </Link>
+                    </div>
+                )
+            })
+        }
+        </>
+    )
 }
 
-export default User;
+export default  User
