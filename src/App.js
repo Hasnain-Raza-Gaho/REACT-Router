@@ -1,9 +1,26 @@
+import React from 'react';
+import {  Routes, Route, Navigate} from 'react-router-dom';
+import About from './components/about'
+import Home from './components/Home'
 
-import Navigation from './config/Navigation'
 
-function App() {
+const App = () => {
+ 
+
+
   return (
-   <Navigation/>
+    <div>
+      App Page
+      <Routes>
+    <Route path='/about' element={<About/>} />
+    <Route path='/' element={<Home/>} />
+    <Route path='*' element={<Navigate to='/about'/>} />
+    
+      </Routes>
+
+
+      
+    </div>
   );
 }
 

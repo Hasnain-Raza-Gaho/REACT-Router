@@ -1,24 +1,11 @@
-import { useNavigate } from "react-router-dom";
-function Home() {
-    let navigate = useNavigate()
-    
+import React from 'react';
+
+const Home = () => {
     return (
-        <>
-
-        <h1>Home</h1>
-      {/* <Link to={"/about"} > <button  >Go To About
-        </button>
-        </Link>  */}
-        <button onClick={()=>navigate("/about",{
-           state : {
-               name : "asad",
-               email : "asad@gmail.com"
-           }
-        }
-        )}>onClick</button>
-        </>
-
-    )
+        <div>
+<p>this is from home page</p>
+        </div>
+    );
 }
 
 export default Home;

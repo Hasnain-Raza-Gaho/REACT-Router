@@ -1,21 +1,11 @@
-import { useLocation ,Link} from "react-router-dom";
+import React from 'react';
 
-function About() {
-
-    let loc = useLocation()
-    console.log(loc)
-
+const About = () => {
     return (
-        <>
-
-        <h1>About {loc.state.name}</h1>
-        <Link to={"/User"}>
-            Go To uSER
-        </Link>
-        </>
-
-
-    )
+        <div>
+            <p>This is from about page</p>
+        </div>
+    );
 }
 
 export default About;
