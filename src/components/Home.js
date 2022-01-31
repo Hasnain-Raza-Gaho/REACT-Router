@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, Link } from 'react-router-dom';
 
 const Home = () => {
     const navigate = useNavigate();
@@ -17,11 +17,7 @@ Course: <input type="text" onChange={(e)=> setCourse(e.target.value)} />
 
 
 <br />
-<button onClick={()=>navigate('./about', {state:{
-    name,
-    classs,
-    course
-}})}>Sign In</button>
+<Link to={'/about'} state={{name,course,classs}}> <button>Sig In</button> </Link>
         </div>
     );
 }
