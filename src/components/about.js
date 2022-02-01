@@ -3,6 +3,13 @@ import {useLocation} from 'react-router-dom';
 
 const About = () => {
     const loc = useLocation();
+if(loc.state == null){
+    loc.state ={
+        name : 'Hasnain Raza',
+        classs : 12,
+        course : 'AI'
+    }
+}
     console.log(loc)
     return (
         <div>
