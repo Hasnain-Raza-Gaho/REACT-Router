@@ -1,32 +1,19 @@
-import React from 'react';
-import {  Routes, Route, Navigate, NavLink} from 'react-router-dom';
-import About from './components/about'
-import Home from './components/Home'
-
+import React,{useState} from 'react';
+import {Route, Routes} from 'react-router-dom';
+import Auth from './components/Auth'
+import Dashboard from './components/Dashboard'
 
 const App = () => {
- 
 
+  const [user, setUser] = useState(false)
 
   return (
-    <div>
-      App Page
-    
-<NavLink to='/' style={({ isActive })=>{
-  return{color:isActive?'red':''}
-}} >Home </NavLink>
-<NavLink to='about' style={({ isActive })=>{
-  return{color:isActive?'red':''}
-}}  > About</NavLink>
+    <div className='App'>
+      App component
       <Routes>
-    <Route path='/about' element={<About/>} />
-    <Route path='/' element={<Home/>} />
-    <Route path='*' element={<Navigate to='/about'/>} />
-    
+        <Route path='/auth' element={<Auth auth={()=>setUser(true)}/>} />
+        <Route path='/dashboard' element={<Dashboard/>} />
       </Routes>
-
-
-      
     </div>
   );
 }
